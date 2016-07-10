@@ -1,0 +1,80 @@
+/**
+ * Joshua Yuan
+ * June 2016
+ */
+
+body {
+    font-family: "Century Gothic", Arial;
+    color: white;
+}
+
+#title {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    opacity: 0.2;
+    font-size: 32px;
+    top: 20px;
+    margin-bottom: 50px;
+}
+
+#visualisation {
+    height: 30vh;
+    position: relative;
+    margin: 10px;
+    -webkit-box-reflect: below 3px -webkit-gradient(linear, left top, left bottom,
+      from(transparent), to(rgba(255,255,255,0.2)));
+    z-index: 4;
+}
+
+#visualisation > div {
+    width: 3%;
+    bottom: 0px;
+    position: absolute;
+    opacity: 0.5;
+}
+
+#player {
+    position: relative;
+    z-index: 4;
+    opacity: 0.3;
+    width: 400px;
+    padding-left: 20px;
+}
+
+#uploadcontainer:hover, #player:hover {
+    opacity: 1.0;
+}
+
+#uploadcontainer {
+    position: relative;
+    z-index: 6;
+    opacity: 0.2;
+    width: 300px;
+}
+
+#processing {
+    z-index: 100;
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    width: 200px;
+    margin: 0px;
+    margin-left: 120px;
+    padding: 0px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+#index {
+    padding-left: 30px;
+}
+
+form, #result {
+    text-align: left;
+    width: 400px;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 50px;
+}

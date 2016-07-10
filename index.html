@@ -1,0 +1,51 @@
+<!--
+Joshua Yuan
+June 2016
+-->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Audio Visualizer</title>
+		<meta name="author" content="Joshua Yuan">
+
+		<!-- CSS files -->
+		<link href="css/background.css" type="text/css" rel="stylesheet">
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+
+		<!-- JavaScript files -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/upload.js"></script>
+		<script src="js/visualizer.js"></script>
+	</head>
+
+	<body>
+		<h1 id ="title">Yuan Audio Visualizer</h1>
+
+		<audio id="player" src="animals.mp3" controls crossorigin="anonymous"></audio>
+
+		<div id = "uploadcontainer">
+			<p id="processing">Uploading...<br/><img src="loader.gif" /></p>
+			<p id="result"></p>
+
+			<!-- File submission form -->
+			<form id ="form" action="upload.php" method="post"
+			enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();" >
+    			Song: <input name="myfile" type="file" />
+          		<input type="submit" name="submitBtn" value="Play!" />
+			</form>
+
+			<iframe id="upload_target" name="upload_target" src="#"
+			style="width:0;height:0;border:0px solid #fff;"></iframe>
+		</div>
+
+		<!-- Background: twinkling stars and moving clouds. -->
+		<div class="stars"></div>
+		<div class="twinkling"></div>
+		<div class="clouds"></div>
+
+		<!-- Contains all bar div elements. -->
+ 		<div id="visualisation"></div>
+	</body>
+</html>
